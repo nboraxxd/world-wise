@@ -1,11 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { PATH } from '@/constants/path'
+import { MainLayout } from '@/layouts/MainLayout'
 import { Homepage } from '@/pages/Homepage'
-import { PageNotFound } from '@/pages/PageNotFound'
 import { Pricing } from '@/pages/Pricing'
 import { Product } from '@/pages/Product'
-import { MainLayout } from '@/layouts/MainLayout'
+import { Login } from '@/pages/Login'
+import { PageNotFound } from '@/pages/PageNotFound'
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.PRODUCT,
         element: <Product />,
+      },
+      {
+        path: PATH.LOGIN,
+        element: <Login />,
       },
     ],
     errorElement: <PageNotFound />,

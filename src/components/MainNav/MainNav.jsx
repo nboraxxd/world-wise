@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import { PATH } from '@/constants/path'
 import styles from './MainNav.module.css'
@@ -7,9 +7,7 @@ import Logo from '../Logo/Logo'
 export default function MainNav() {
   return (
     <nav className={styles.nav}>
-      <Link to={PATH.HOMEPAGE}>
-        <Logo />
-      </Link>
+      <Logo />
 
       <ul>
         <li>
@@ -19,7 +17,9 @@ export default function MainNav() {
           <NavLink to={PATH.PRODUCT}>Product</NavLink>
         </li>
         <li>
-          <NavLink to={PATH.LOGIN}>Login</NavLink>
+          <NavLink to={PATH.LOGIN} className={styles.ctaLink}>
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>

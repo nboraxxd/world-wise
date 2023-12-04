@@ -1,0 +1,25 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 3rem;
+  border-radius: 7px;
+  background-color: var(--color-dark--2);
+
+  /* Different from other form */
+  width: 48rem;
+  margin: 8rem auto;
+}
+
+.loginRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 36em) {
+  .loginForm {
+    width: 100%;
+  }
+}
