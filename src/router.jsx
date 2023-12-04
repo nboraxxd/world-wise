@@ -13,6 +13,7 @@ export const router = createBrowserRouter([
   {
     path: PATH.HOMEPAGE,
     element: <MainLayout />,
+    errorElement: <PageNotFound />,
     children: [
       {
         index: true,
@@ -28,7 +29,6 @@ export const router = createBrowserRouter([
       },
       authRouter,
     ],
-    errorElement: <PageNotFound />,
   },
 
   appRouter,

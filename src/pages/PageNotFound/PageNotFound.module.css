@@ -1,7 +1,7 @@
 .pageNotFound {
   height: 100vh;
   padding: 2.5rem 5rem;
-  background-image: linear-gradient(rgba(36, 42, 46, 0.9), rgba(36, 42, 46, 0.9)), url('/images/error.png');
+  background-image: linear-gradient(rgba(36, 42, 46, 0.9), rgba(36, 42, 46, 0.9)), url('/images/error.webp');
   background-size: cover;
   background-position: center;
 }

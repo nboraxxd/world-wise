@@ -3,7 +3,7 @@ import styles from './Product.module.css'
 export default function Product() {
   return (
     <section className={styles.main}>
-      <img src="/images/img-1.jpg" alt="person with dog overlooking mountain with sunset" className={styles.image} />
+      <img src="/images/img-1.webp" alt="person with dog overlooking mountain with sunset" className={styles.image} />
       <div>
         <h1 className={styles.title}>About WorldWide.</h1>
         <p className={styles.desc}>

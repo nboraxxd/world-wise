@@ -12,7 +12,7 @@ export default function Pricing() {
         </h1>
         <p className={styles.desc}>Perfect for occasional travelers who want to keep track of their adventures.</p>
       </div>
-      <img src="/images/img-2.jpg" alt="overview of a large city with skyscrapers" className={styles.image} />
+      <img src="/images/img-2.webp" alt="overview of a large city with skyscrapers" className={styles.image} />
     </section>
   )
 }
