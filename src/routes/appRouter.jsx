@@ -2,7 +2,7 @@ import { Navigate } from 'react-router-dom'
 
 import { PATH } from '@/constants/path'
 import { AppRoute } from '@/routes/AppRoute'
-import { App } from '@/pages/App'
+import { AppLayout } from '@/layouts/AppLayout'
 
 export const appRouter = {
   path: PATH.APP.INDEX,
@@ -14,7 +14,7 @@ export const appRouter = {
     },
     {
       path: PATH.APP.CITIES,
-      element: <App />,
+      element: <AppLayout />,
     },
   ],
 }

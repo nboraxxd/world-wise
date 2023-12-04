@@ -1,7 +1,7 @@
 import { Sidebar } from '@/components/Sidebar'
-import styles from './App.module.css'
+import styles from './AppLayout.module.css'
 
-export default function App() {
+export default function AppLayout() {
   return (
     <div className={styles.app}>
       <Sidebar />
