@@ -1,12 +1,16 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { Navigate, createBrowserRouter } from 'react-router-dom'
 
 import { PATH } from '@/constants/path'
 import { MainLayout } from '@/layouts/MainLayout'
+import { AuthRoute } from '@/routes/AuthRoute'
 import { Homepage } from '@/pages/Homepage'
 import { Pricing } from '@/pages/Pricing'
 import { Product } from '@/pages/Product'
 import { Login } from '@/pages/Login'
 import { PageNotFound } from '@/pages/PageNotFound'
+
+import { AppRoute } from '@/routes/AppRoute'
+import { App } from '@/pages/App'
 
 export const router = createBrowserRouter([
   {
@@ -26,10 +30,29 @@ export const router = createBrowserRouter([
         element: <Product />,
       },
       {
-        path: PATH.LOGIN,
-        element: <Login />,
+        element: <AuthRoute />,
+        children: [
+          {
+            path: PATH.LOGIN,
+            element: <Login />,
+          },
+        ],
       },
     ],
     errorElement: <PageNotFound />,
+  },
+  {
+    path: PATH.APP.INDEX,
+    element: <AppRoute />,
+    children: [
+      {
+        index: true,
+        element: <Navigate replace to={PATH.APP.CITIES} />,
+      },
+      {
+        path: PATH.APP.CITIES,
+        element: <App />,
+      },
+    ],
   },
 ])
