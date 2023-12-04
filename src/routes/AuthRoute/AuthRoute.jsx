@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 import { PATH } from '@/constants/path'
 
 export default function AuthRoute() {
-  const [isLoggedIn] = useState(false)
+  const [isLoggedIn] = useState(true)
 
   return isLoggedIn ? <Navigate to={PATH.APP.CITIES} /> : <Outlet />
 }
