@@ -16,6 +16,7 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'no-unused-vars': ['warn', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }],
+    'react/prop-types': 'off',
     'prettier/prettier': [
       'warn',
       {
