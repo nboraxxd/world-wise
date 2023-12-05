@@ -1,4 +1,5 @@
 import { useOutletContext } from 'react-router-dom'
+import { CityItem } from '@/components/CityItem'
 import styles from './CityList.module.css'
 
 export default function CityList() {
@@ -14,7 +15,7 @@ export default function CityList() {
   return (
     <ul className={styles.cityList}>
       {cities.map((city) => (
-        <li key={city.id}>{city.cityName}</li>
+        <CityItem key={city.id} city={city} />
       ))}
     </ul>
   )
