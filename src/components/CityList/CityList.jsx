@@ -1,6 +1,8 @@
 import { useOutletContext } from 'react-router-dom'
 import { CityItem } from '@/components/CityItem'
 import styles from './CityList.module.css'
+import { Message } from '@/components/Message'
+import { Spinner } from '@/components/Spinner'
 
 export default function CityList() {
   const {
@@ -8,9 +10,10 @@ export default function CityList() {
   } = useOutletContext()
   const isLoading = citiesStatus === 'pending' || citiesStatus === 'idle'
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <Spinner />
 
-  if (citiesError) return <div>{citiesError}</div>
+  if (citiesError || cities.length === 0)
+    return <Message message={citiesError || 'Add your first city by clicking on a city on the map'} />
 
   return (
     <ul className={styles.cityList}>
