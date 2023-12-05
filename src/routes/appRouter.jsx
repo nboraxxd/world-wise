@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom'
 import { PATH } from '@/constants/path'
 import { AppRoute } from '@/routes/AppRoute'
 import { AppLayout } from '@/layouts/AppLayout'
+import { CityList } from '@/components/CityList'
 
 export const appRouter = {
   element: <AppRoute />,
@@ -16,7 +17,7 @@ export const appRouter = {
       children: [
         {
           path: PATH.APP.CITIES,
-          element: <p>Cities</p>,
+          element: <CityList />,
         },
         {
           path: PATH.APP.COUNTRIES,
