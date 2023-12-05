@@ -1,13 +1,15 @@
 import { useOutletContext } from 'react-router-dom'
+
 import { CityItem } from '@/components/CityItem'
-import styles from './CityList.module.css'
 import { Message } from '@/components/Message'
 import { Spinner } from '@/components/Spinner'
+import styles from './CityList.module.css'
 
 export default function CityList() {
   const {
     cities: { data: cities, status: citiesStatus, error: citiesError },
   } = useOutletContext()
+
   const isLoading = citiesStatus === 'pending' || citiesStatus === 'idle'
 
   if (isLoading) return <Spinner />
