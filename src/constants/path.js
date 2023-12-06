@@ -8,6 +8,7 @@ export const PATH = {
   APP: {
     INDEX: APP,
     CITIES: APP + '/cities',
+    CITY: APP + '/cities/:id',
     COUNTRIES: APP + '/countries',
     FORM: APP + '/form',
   },

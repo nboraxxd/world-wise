@@ -5,6 +5,7 @@ import { AppRoute } from '@/routes/AppRoute'
 import { AppLayout } from '@/layouts/AppLayout'
 import { CityList } from '@/components/CityList'
 import { CountryList } from '@/components/CountryList'
+import { City } from '@/pages/City'
 
 export const appRouter = {
   element: <AppRoute />,
@@ -23,6 +24,10 @@ export const appRouter = {
         {
           path: PATH.APP.COUNTRIES,
           element: <CountryList />,
+        },
+        {
+          path: PATH.APP.CITY,
+          element: <City />,
         },
       ],
     },
