@@ -6,6 +6,7 @@ import { AppLayout } from '@/layouts/AppLayout'
 import { CityList } from '@/components/CityList'
 import { CountryList } from '@/components/CountryList'
 import { City } from '@/pages/City'
+import Form from '@/components/Form/Form'
 
 export const appRouter = {
   element: <AppRoute />,
@@ -24,6 +25,10 @@ export const appRouter = {
         {
           path: PATH.APP.COUNTRIES,
           element: <CountryList />,
+        },
+        {
+          path: PATH.APP.FORM,
+          element: <Form />,
         },
         {
           path: PATH.APP.CITY,
