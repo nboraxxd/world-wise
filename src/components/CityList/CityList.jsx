@@ -1,21 +1,18 @@
-import { useOutletContext } from 'react-router-dom'
-
+import { useCities } from '@/contexts/cities.context'
 import { CityItem } from '@/components/CityItem'
 import { Message } from '@/components/Message'
 import { Spinner } from '@/components/Spinner'
 import styles from './CityList.module.css'
 
 export default function CityList() {
-  const {
-    cities: { data: cities, status: citiesStatus, error: citiesError },
-  } = useOutletContext()
+  const { cities, status, error } = useCities()
 
-  const isLoading = citiesStatus === 'pending' || citiesStatus === 'idle'
+  const isLoading = status === 'pending' || status === 'idle'
 
   if (isLoading) return <Spinner />
 
-  if (citiesError || cities.length === 0)
-    return <Message message={citiesError || 'Add your first city by clicking on a city on the map'} />
+  if (error || cities.length === 0)
+    return <Message message={error || 'Add your first city by clicking on a city on the map'} />
 
   return (
     <ul className={styles.cityList}>

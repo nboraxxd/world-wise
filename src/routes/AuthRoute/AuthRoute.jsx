@@ -5,5 +5,5 @@ import { PATH } from '@/constants/path'
 export default function AuthRoute() {
   const [isLoggedIn] = useState(true)
 
-  return isLoggedIn ? <Navigate to={PATH.APP.CITIES} /> : <Outlet />
+  return isLoggedIn ? <Navigate to={PATH.APP.CITIES} replace /> : <Outlet />
 }

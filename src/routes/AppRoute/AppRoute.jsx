@@ -5,5 +5,5 @@ import { PATH } from '@/constants/path'
 export default function AppRoute() {
   const [isLoggedIn] = useState(true)
 
-  return isLoggedIn ? <Outlet /> : <Navigate to={PATH.LOGIN} />
+  return isLoggedIn ? <Outlet /> : <Navigate replace to={PATH.LOGIN} />
 }

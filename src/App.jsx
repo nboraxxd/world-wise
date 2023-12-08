@@ -1,12 +1,15 @@
 import { RouterProvider } from 'react-router-dom'
 
+import CitiesProvider from '@/contexts/cities.context'
 import { router } from '@/router'
 import '@/globals.css'
 
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <CitiesProvider>
+        <RouterProvider router={router} />
+      </CitiesProvider>
     </>
   )
 }

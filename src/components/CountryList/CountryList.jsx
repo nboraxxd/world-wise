@@ -1,22 +1,20 @@
-import { useOutletContext } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 
+import { useCities } from '@/contexts/cities.context'
 import { Message } from '@/components/Message'
 import { Spinner } from '@/components/Spinner'
 import { CountryItem } from '@/components/CountryItem'
 import styles from './CountryList.module.css'
 
 export default function CountryList() {
-  const {
-    cities: { data: cities, status: citiesStatus, error: citiesError },
-  } = useOutletContext()
+  const { cities, status, error } = useCities()
 
-  const isLoading = citiesStatus === 'pending' || citiesStatus === 'idle'
+  const isLoading = status === 'pending' || status === 'idle'
 
   if (isLoading) return <Spinner />
 
-  if (citiesError || cities.length === 0)
-    return <Message message={citiesError || 'Add your first city by clicking on a city on the map'} />
+  if (error || cities.length === 0)
+    return <Message message={error || 'Add your first city by clicking on a city on the map'} />
 
   const countries = cities.reduce((arr, city) => {
     const isExist = arr.some((country) => country.code === city.countryCode)
