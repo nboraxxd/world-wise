@@ -13,7 +13,7 @@ export default function useFetch(promise, dependencies = []) {
       try {
         setStatus('pending')
 
-        const response = await promise(controller.signal, dependencies)
+        const response = await promise(controller.signal, ...dependencies)
 
         setData(response)
         setStatus('successful')

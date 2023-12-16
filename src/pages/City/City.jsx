@@ -14,12 +14,14 @@ export default function City() {
   const { id: cityId } = useParams()
   const { setCurrentCity } = useCities()
 
-  const { data: city, status, error } = useFetch(citiesService.getCity, cityId)
+  const { data: city, status, error } = useFetch(citiesService.getCity, [cityId])
   const { countryCode, cityName, date, notes } = city
   const isLoading = status === 'pending' || status === 'idle'
 
   useEffect(() => {
-    setCurrentCity(city)
+    if (city) {
+      setCurrentCity(city)
+    }
   }, [setCurrentCity, city])
 
   if (isLoading) return <Spinner />
