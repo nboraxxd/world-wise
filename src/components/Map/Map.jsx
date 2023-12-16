@@ -6,6 +6,7 @@ import { useCities } from '@/contexts/cities.context'
 import { CenterPosition } from '@/components/CenterPosition'
 import { Flag } from '@/components/Flag'
 import styles from './Map.module.css'
+import { DetectClick } from '@/components/DetectClick'
 
 export default function Map() {
   const [mapPosition, setMapPosition] = useState([40, 0])
@@ -41,6 +42,7 @@ export default function Map() {
         ))}
 
         <CenterPosition position={mapPosition} />
+        <DetectClick />
       </MapContainer>
     </div>
   )
