@@ -17,23 +17,23 @@
   gap: 0.5rem;
 }
 
-.city h6 {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: var(--color-light--1);
-}
-
-.city h3 {
+.flag {
   font-size: 1.9rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.city h3 span {
-  font-size: 3.2rem;
-  line-height: 1;
+.flag img {
+  max-height: 3.2rem;
+  height: 3.2rem;
+}
+
+.city h6 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--color-light--1);
 }
 
 .city p {
@@ -44,4 +44,13 @@
 .city a:visited {
   font-size: 1.6rem;
   color: var(--color-brand--1);
+}
+
+.city::-webkit-scrollbar {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }

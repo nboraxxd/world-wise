@@ -4,8 +4,11 @@ import { PATH } from '@/constants/path'
 import { formatDate } from '@/utils/common'
 import { Flag } from '@/components/Flag'
 import styles from './CityItem.module.css'
+import { useCities } from '@/contexts/cities.context'
+import clsx from 'clsx'
 
 export default function CityItem({ city }) {
+  const { currentCity } = useCities()
   const { id, cityName, countryCode, country, date, position } = city
 
   const cityPath = generatePath(PATH.APP.CITY, { id })
@@ -13,7 +16,10 @@ export default function CityItem({ city }) {
 
   return (
     <li>
-      <Link to={{ pathname: cityPath, search: citySearchParams }} className={styles.cityItem}>
+      <Link
+        to={{ pathname: cityPath, search: citySearchParams }}
+        className={clsx(styles.cityItem, { [styles['cityItem--active']]: currentCity?.id === id })}
+      >
         <div className={styles.flag}>
           <Flag countryCode={countryCode} countryName={country} />
         </div>

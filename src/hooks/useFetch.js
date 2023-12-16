@@ -1,7 +1,7 @@
 import { CanceledError } from 'axios'
 import { useEffect, useState } from 'react'
 
-export default function useFetch(promise, dependencyList = []) {
+export default function useFetch(promise, dependencies = []) {
   const [data, setData] = useState([])
   const [status, setStatus] = useState('idle')
   const [error, setError] = useState('')
@@ -13,7 +13,7 @@ export default function useFetch(promise, dependencyList = []) {
       try {
         setStatus('pending')
 
-        const response = await promise(controller.signal)
+        const response = await promise(controller.signal, dependencies)
 
         setData(response)
         setStatus('successful')
@@ -37,7 +37,7 @@ export default function useFetch(promise, dependencyList = []) {
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [promise, ...dependencyList])
+  }, [...dependencies])
 
   return { data, status, error }
 }

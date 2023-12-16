@@ -1,13 +1,20 @@
+import { createContext, useContext, useState } from 'react'
+
 import useFetch from '@/hooks/useFetch'
 import { citiesService } from '@/services/cities.service'
-import { createContext, useContext } from 'react'
 
 const CitiesContext = createContext()
 
 export default function CitiesProvider({ children }) {
+  const [currentCity, setCurrentCity] = useState({})
+
   const { data: cities, status, error } = useFetch(citiesService.getCities)
 
-  return <CitiesContext.Provider value={{ cities, status, error }}>{children}</CitiesContext.Provider>
+  return (
+    <CitiesContext.Provider value={{ cities, status, error, currentCity, setCurrentCity }}>
+      {children}
+    </CitiesContext.Provider>
+  )
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
