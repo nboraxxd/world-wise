@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
+import { toast } from 'sonner'
 
 import useFetch from '@/hooks/useFetch'
 import { citiesService } from '@/services/cities.service'
@@ -29,11 +30,27 @@ export default function CitiesProvider({ children }) {
       setStatus('successful')
     } catch (err) {
       setStatus('rejected')
-      if (err instanceof Error) {
-        setError(err.message)
-      } else {
-        setError('Something went wrong')
-      }
+      toast.error(err.message || 'Something went wrong')
+      setError(err.message || 'Something went wrong')
+
+      throw err
+    }
+  }
+
+  async function deleteCity(cityId) {
+    if (!cityId) return
+
+    try {
+      setStatus('pending')
+
+      await citiesService.deleteCity(cityId)
+      setCities((prevCities) => prevCities.filter((city) => city.id !== cityId))
+
+      setStatus('successful')
+    } catch (err) {
+      setStatus('rejected')
+      toast.error(err.message || 'Something went wrong')
+      throw err
     }
   }
 
@@ -41,13 +58,15 @@ export default function CitiesProvider({ children }) {
     <CitiesContext.Provider
       value={{
         cities,
+        setCities,
         fetchStatus,
         fetchError,
         currentCity,
         setCurrentCity,
         createCity,
-        createCityStatus: status,
-        createCityError: error,
+        deleteCity,
+        cityStatus: status,
+        cityError: error,
       }}
     >
       {children}

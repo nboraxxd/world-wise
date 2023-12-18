@@ -19,4 +19,8 @@ export const citiesService = {
   createCity(city) {
     return http.post(CITIES_URL, city)
   },
+
+  deleteCity(id) {
+    return http.delete(`${CITIES_URL}/${id}`)
+  },
 }

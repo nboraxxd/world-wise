@@ -1,5 +1,6 @@
-import { CanceledError } from 'axios'
 import { useEffect, useState } from 'react'
+import { CanceledError } from 'axios'
+import { toast } from 'sonner'
 
 export default function useFetch(promise, dependencies = [], options = {}) {
   const [data, setData] = useState([])
@@ -26,10 +27,14 @@ export default function useFetch(promise, dependencies = [], options = {}) {
 
         setStatus('rejected')
         if (err instanceof Error) {
+          toast.error(err.message)
           setError(err.message)
         } else {
+          toast.error('Something went wrong')
           setError('Something went wrong')
         }
+
+        throw err
       }
     })()
 

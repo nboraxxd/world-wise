@@ -26,8 +26,8 @@ export default function Form() {
   const navigate = useNavigate()
   const { mapLat, mapLng } = useUrlPosition()
 
-  const { createCity, createCityStatus } = useCities()
-  const isCreatingCity = createCityStatus === 'pending'
+  const { createCity, cityStatus } = useCities()
+  const isCreatingCity = cityStatus === 'pending'
 
   const { data, error, status } = useFetch(citiesService.getCityData, [mapLat, mapLng], { disable: !mapLat && !mapLng })
   const isLoading = status === 'pending' || status === 'idle'
