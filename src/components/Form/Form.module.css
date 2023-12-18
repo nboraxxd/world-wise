@@ -43,3 +43,8 @@
   font-family: inherit;
   font-size: 1.2rem;
 }
+
+:global(.react-datepicker__triangle) {
+  left: 25px !important;
+  transform: translateX(0) !important;
+}

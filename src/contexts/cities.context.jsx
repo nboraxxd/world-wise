@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
 import useFetch from '@/hooks/useFetch'
 import { citiesService } from '@/services/cities.service'
@@ -7,11 +7,49 @@ const CitiesContext = createContext()
 
 export default function CitiesProvider({ children }) {
   const [currentCity, setCurrentCity] = useState({})
+  const [cities, setCities] = useState([])
+  const [status, setStatus] = useState('idle')
+  const [error, setError] = useState('')
 
-  const { data: cities, status, error } = useFetch(citiesService.getCities)
+  const { data: _cities, status: fetchStatus, error: fetchError } = useFetch(citiesService.getCities)
+
+  useEffect(() => {
+    if (_cities) {
+      setCities(_cities)
+    }
+  }, [_cities])
+
+  async function createCity(newCity) {
+    try {
+      setStatus('pending')
+
+      const res = await citiesService.createCity(newCity)
+
+      setCities((prevCities) => [...prevCities, res])
+      setStatus('successful')
+    } catch (err) {
+      setStatus('rejected')
+      if (err instanceof Error) {
+        setError(err.message)
+      } else {
+        setError('Something went wrong')
+      }
+    }
+  }
 
   return (
-    <CitiesContext.Provider value={{ cities, status, error, currentCity, setCurrentCity }}>
+    <CitiesContext.Provider
+      value={{
+        cities,
+        fetchStatus,
+        fetchError,
+        currentCity,
+        setCurrentCity,
+        createCity,
+        createCityStatus: status,
+        createCityError: error,
+      }}
+    >
       {children}
     </CitiesContext.Provider>
   )

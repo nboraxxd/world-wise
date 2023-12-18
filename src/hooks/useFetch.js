@@ -1,12 +1,13 @@
 import { CanceledError } from 'axios'
 import { useEffect, useState } from 'react'
 
-export default function useFetch(promise, dependencies = []) {
+export default function useFetch(promise, dependencies = [], options = {}) {
   const [data, setData] = useState([])
   const [status, setStatus] = useState('idle')
   const [error, setError] = useState('')
 
   useEffect(() => {
+    if (options.disable) return
     const controller = new AbortController()
 
     ;(async () => {

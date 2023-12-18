@@ -15,4 +15,8 @@ export const citiesService = {
   getCityData(signal, lat, lng) {
     return http.get(CITY_DATA_URL, { params: { latitude: lat, longitude: lng }, signal })
   },
+
+  createCity(city) {
+    return http.post(CITIES_URL, city)
+  },
 }

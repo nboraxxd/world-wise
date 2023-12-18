@@ -5,14 +5,14 @@ import { Spinner } from '@/components/Spinner'
 import styles from './CityList.module.css'
 
 export default function CityList() {
-  const { cities, status, error } = useCities()
+  const { cities, fetchStatus, fetchError } = useCities()
 
-  const isLoading = status === 'pending' || status === 'idle'
+  const isLoading = fetchStatus === 'pending' || fetchStatus === 'idle'
 
   if (isLoading) return <Spinner />
 
-  if (error || cities.length === 0)
-    return <Message message={error || 'Add your first city by clicking on a city on the map'} />
+  if (fetchError || cities.length === 0)
+    return <Message message={fetchError || 'Add your first city by clicking on a city on the map'} />
 
   return (
     <ul className={styles.cityList}>

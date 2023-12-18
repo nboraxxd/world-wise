@@ -7,14 +7,14 @@ import { CountryItem } from '@/components/CountryItem'
 import styles from './CountryList.module.css'
 
 export default function CountryList() {
-  const { cities, status, error } = useCities()
+  const { cities, fetchStatus, fetchError } = useCities()
 
-  const isLoading = status === 'pending' || status === 'idle'
+  const isLoading = fetchStatus === 'pending' || fetchStatus === 'idle'
 
   if (isLoading) return <Spinner />
 
-  if (error || cities.length === 0)
-    return <Message message={error || 'Add your first city by clicking on a city on the map'} />
+  if (fetchError || cities.length === 0)
+    return <Message message={fetchError || 'Add your first city by clicking on a city on the map'} />
 
   const countries = cities.reduce((arr, city) => {
     const isExist = arr.some((country) => country.code === city.countryCode)
