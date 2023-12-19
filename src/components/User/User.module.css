@@ -40,6 +40,21 @@
   }
 }
 
+@media (max-width: 36em) {
+  .user {
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 26.5em) {
+  .user {
+    font-size: 1.3rem;
+  }
+  .user img {
+    display: none;
+  }
+}
+
 @media (max-width: 48em) {
   .user {
     right: 50%;

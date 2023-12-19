@@ -2,7 +2,14 @@
   margin-top: auto;
 }
 
+@media (max-width: 48em) {
+  .footer {
+    display: none;
+  }
+}
+
 .copyright {
+  margin-top: 2rem;
   font-size: 1.2rem;
   color: var(--color-light--1);
 }

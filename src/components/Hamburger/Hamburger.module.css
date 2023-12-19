@@ -1,0 +1,23 @@
+.btn {
+  border: none;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  padding: 0.5rem;
+
+  background: none;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn svg {
+  width: 4rem;
+  height: 4rem;
+  color: var(--color-dark--1);
+  filter: drop-shadow(2px 3px 2px rgb(0 0 0 / 0.4));
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}

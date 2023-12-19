@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.mapContainer button {
+:global(.geolocation) {
   bottom: unset;
   left: unset;
   top: 10rem;
@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 48em) {
-  .mapContainer button {
+  :global(.geolocation) {
     transform: translateX(50%);
     right: 50%;
   }

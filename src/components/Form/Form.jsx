@@ -76,7 +76,6 @@ export default function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        {/* <input  onChange={(e) => setDate(e.target.value)} value={date} /> */}
         <DatePicker calendarStartDay={1} dateFormat="dd/MM/yyyy" id="date" onChange={setDate} selected={date} />
       </div>
 

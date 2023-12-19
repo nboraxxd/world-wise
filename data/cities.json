@@ -119,6 +119,150 @@
         "lng": "42.890625"
       },
       "id": 24
+    },
+    {
+      "cityName": "Qira",
+      "country": "China",
+      "countryCode": "CN",
+      "date": "2024-02-02T09:40:03.000Z",
+      "notes": "",
+      "position": {
+        "lat": "36.79169061907076",
+        "lng": "81.16699218750001"
+      },
+      "id": 25
+    },
+    {
+      "cityName": "Samarskoye",
+      "country": "Kazakhstan",
+      "countryCode": "KZ",
+      "date": "2023-12-19T09:51:10.652Z",
+      "notes": "",
+      "position": {
+        "lat": "49.224772722794825",
+        "lng": "83.21044921875001"
+      },
+      "id": 26
+    },
+    {
+      "cityName": "Ham Tan",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "date": "2023-12-19T12:01:48.535Z",
+      "notes": "Hello there!",
+      "position": {
+        "lat": "10.610626914789327",
+        "lng": "107.63530969619752"
+      },
+      "id": 27
+    },
+    {
+      "cityName": "Ham Tan",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "date": "2023-12-19T12:02:07.184Z",
+      "notes": "Demo",
+      "position": {
+        "lat": "10.613352884917637",
+        "lng": "107.63557255268098"
+      },
+      "id": 28
+    },
+    {
+      "cityName": "Lamam",
+      "country": "Laos",
+      "countryCode": "LA",
+      "date": "2023-12-19T12:04:48.151Z",
+      "notes": "",
+      "position": {
+        "lat": "15.358356179450597",
+        "lng": "106.864013671875"
+      },
+      "id": 29
+    },
+    {
+      "cityName": "Nanjing",
+      "country": "China",
+      "countryCode": "CN",
+      "date": "2023-12-19T12:05:02.892Z",
+      "notes": "",
+      "position": {
+        "lat": "32.18491105051798",
+        "lng": "118.98193359375001"
+      },
+      "id": 30
+    },
+    {
+      "cityName": "Yixing",
+      "country": "China",
+      "countryCode": "CN",
+      "date": "2023-12-19T12:05:20.244Z",
+      "notes": "sss",
+      "position": {
+        "lat": "31.475524020001806",
+        "lng": "119.94873046875001"
+      },
+      "id": 31
+    },
+    {
+      "cityName": "Komsomolsk-on-Amur",
+      "country": "Russia",
+      "countryCode": "RU",
+      "date": "2023-12-19T13:13:08.039Z",
+      "notes": "",
+      "position": {
+        "lat": "49.55372551347579",
+        "lng": "138.25195312500003"
+      },
+      "id": 32
+    },
+    {
+      "cityName": "Tymovskoye",
+      "country": "Russia",
+      "countryCode": "RU",
+      "date": "2023-12-19T13:13:28.717Z",
+      "notes": "",
+      "position": {
+        "lat": "50.48547354578499",
+        "lng": "143.04199218750003"
+      },
+      "id": 33
+    },
+    {
+      "cityName": "Batagay-Alyta",
+      "country": "Russia",
+      "countryCode": "RU",
+      "date": "2023-12-19T13:13:38.924Z",
+      "notes": "",
+      "position": {
+        "lat": "67.56733207974125",
+        "lng": "131.24268182560598"
+      },
+      "id": 34
+    },
+    {
+      "cityName": "Zhuzhou",
+      "country": "China",
+      "countryCode": "CN",
+      "date": "2023-12-19T13:56:36.880Z",
+      "notes": "",
+      "position": {
+        "lat": "27.72243591897343",
+        "lng": "113.64257812500001"
+      },
+      "id": 35
+    },
+    {
+      "cityName": "Aqmol",
+      "country": "Kazakhstan",
+      "countryCode": "KZ",
+      "date": "2023-12-19T14:13:09.866Z",
+      "notes": "",
+      "position": {
+        "lat": "51.11041991029264",
+        "lng": "71.52099609375001"
+      },
+      "id": 36
     }
   ]
 }

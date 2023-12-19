@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
-import styles from './AppNav.module.css'
+
 import { PATH } from '@/constants/path'
+import styles from './AppNav.module.css'
 
 export default function AppNav() {
   return (
