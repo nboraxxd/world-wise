@@ -101,7 +101,6 @@ export default function CitiesProvider({ children }) {
   )
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export function useCities() {
   const context = useContext(CitiesContext)
 

@@ -14,7 +14,6 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh', 'prettier'],
   rules: {
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'no-unused-vars': ['warn', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }],
     'react/prop-types': 'off',
     'prettier/prettier': [
