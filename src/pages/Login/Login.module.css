@@ -1,4 +1,4 @@
-.loginForm {
+.form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -12,14 +12,19 @@
   margin: 8rem auto;
 }
 
-.loginRow {
+.row {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+.form button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 @media (max-width: 36em) {
-  .loginForm {
+  .form {
     width: 100%;
   }
 }

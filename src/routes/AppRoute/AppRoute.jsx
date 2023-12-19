@@ -1,9 +1,10 @@
-import { useState } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
+
 import { PATH } from '@/constants/path'
+import { useAuth } from '@/contexts/auth.context'
 
 export default function AppRoute() {
-  const [isLoggedIn] = useState(true)
+  const { isAuthenticated } = useAuth()
 
-  return isLoggedIn ? <Outlet /> : <Navigate replace to={PATH.LOGIN} />
+  return isAuthenticated ? <Outlet /> : <Navigate replace to={PATH.LOGIN} />
 }
