@@ -1,3 +1,124 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "cityName": "Ulsan",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "date": "2023-12-19T03:50:08.687Z",
+      "notes": "",
+      "position": {
+        "lat": "35.538931360333486",
+        "lng": "129.32470321655276"
+      },
+      "id": 14
+    },
+    {
+      "cityName": "Incheon",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "date": "2023-12-19T03:50:29.677Z",
+      "notes": "",
+      "position": {
+        "lat": "37.4039828536417",
+        "lng": "126.65725708007814"
+      },
+      "id": 15
+    },
+    {
+      "cityName": "Binh Minh",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "date": "2023-12-19T03:57:57.416Z",
+      "notes": "",
+      "position": {
+        "lat": "10.033766870069249",
+        "lng": "105.82031250000001"
+      },
+      "id": 16
+    },
+    {
+      "cityName": "Kampar Kiri Hulu",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "date": "2023-12-19T03:58:23.172Z",
+      "notes": "",
+      "position": {
+        "lat": "-0.3515602939922709",
+        "lng": "101.11816406250001"
+      },
+      "id": 17
+    },
+    {
+      "cityName": "Iceland",
+      "country": "Iceland",
+      "countryCode": "IS",
+      "date": "2023-12-19T04:05:56.296Z",
+      "notes": "",
+      "position": {
+        "lat": "67.14436530472902",
+        "lng": "-18.698730468750004"
+      },
+      "id": 19
+    },
+    {
+      "cityName": "Vopnafjorður",
+      "country": "Iceland",
+      "countryCode": "IS",
+      "date": "2023-12-19T04:11:38.619Z",
+      "notes": "",
+      "position": {
+        "lat": "65.6492162924837",
+        "lng": "-15.578613281250002"
+      },
+      "id": 20
+    },
+    {
+      "cityName": "Kecamatan Rikit Gaib",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "date": "2023-12-19T04:29:49.412Z",
+      "notes": "",
+      "position": {
+        "lat": "4.19302960536076",
+        "lng": "97.3388671875"
+      },
+      "id": 21
+    },
+    {
+      "cityName": "Nuuk",
+      "country": "Greenland",
+      "countryCode": "GL",
+      "date": "2023-12-19T04:29:57.529Z",
+      "notes": "",
+      "position": {
+        "lat": "69.64180371719556",
+        "lng": "-31.530761718750004"
+      },
+      "id": 22
+    },
+    {
+      "cityName": "Nuuk",
+      "country": "Greenland",
+      "countryCode": "GL",
+      "date": "2023-12-19T04:30:36.755Z",
+      "notes": "",
+      "position": {
+        "lat": "66.67038675925365",
+        "lng": "-40.45166015625"
+      },
+      "id": 23
+    },
+    {
+      "cityName": "Chkalovsk",
+      "country": "Russia",
+      "countryCode": "RU",
+      "date": "2023-12-19T04:30:47.807Z",
+      "notes": "",
+      "position": {
+        "lat": "56.559482483762245",
+        "lng": "42.890625"
+      },
+      "id": 24
+    }
+  ]
 }
